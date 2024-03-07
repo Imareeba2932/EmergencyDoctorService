@@ -9,7 +9,8 @@ const myschema = new Schema({
     speciality: {type:String, required: true},
     image: {type:String},
     avatar: {type:String, default: "avatar_placeholder.png"},
-    createdAt: Date
+    createdAt: Date,
+    notiToken: {type:String, default: ''}
 });
 
 module.exports = model('doctor',myschema);

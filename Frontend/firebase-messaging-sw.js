@@ -10,11 +10,11 @@ if ('serviceWorker' in navigator) {
 
     }
     self.addEventListener('push', event => {
-        const data = event.data.json(); // Assuming the payload is in JSON format
+        const {data} = event.data.json(); // Assuming the payload is in JSON format
         console.log('New notification', data);
         const options = {
             body: data.body,
-            icon: '/path/to/your/icon.png',
+            icon: '/vite.svg',
             data: {
                 url: data.link, // Customize the link to open when the notification is clicked
             },
